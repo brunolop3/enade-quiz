@@ -661,8 +661,10 @@ io.on('connection', (socket) => {
   })
 })
 
-const PORT = 3003
-httpServer.listen(PORT, () => {
+// Railway/Fly/Render/etc inject PORT via env var — fall back to 3003 for
+// local dev and the VPS/PM2 setup, which still expect the fixed port.
+const PORT = Number(process.env.PORT) || 3003
+httpServer.listen(PORT, '0.0.0.0', () => {
   console.log(`ENADE Quiz real-time server running on port ${PORT}`)
 })
 

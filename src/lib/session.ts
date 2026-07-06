@@ -1,10 +1,24 @@
 import { io, Socket } from 'socket.io-client'
 
+// Resolves where the Socket.IO real-time service lives.
+//
+// - VPS deploy (Caddyfile + PM2, see deploy/DEPLOY.md): the service runs on
+//   localhost:3003 behind Caddy, reached via the `?XTransformPort=3003`
+//   query-string trick — no env var needed, this is the default.
+// - Any deploy without that Caddy in front (Vercel, or the socket service
+//   hosted on its own platform like Railway/Fly.io): set
+//   NEXT_PUBLIC_SOCKET_URL to the service's full URL (e.g.
+//   https://enade-quiz-realtime.up.railway.app) and the client connects
+//   there directly instead.
+export function getSocketUrl(): string {
+  return process.env.NEXT_PUBLIC_SOCKET_URL || '/?XTransformPort=3003'
+}
+
 let socket: Socket | null = null
 
 export function getSocket(): Socket {
   if (!socket) {
-    socket = io('/?XTransformPort=3003', {
+    socket = io(getSocketUrl(), {
       transports: ['websocket', 'polling'],
       forceNew: true,
       reconnection: true,

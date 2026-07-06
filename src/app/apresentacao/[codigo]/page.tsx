@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useCallback, useRef } from 'react'
 import { io, Socket } from 'socket.io-client'
+import { getSocketUrl } from '@/lib/session'
 import { QRCode } from 'react-qrcode-logo'
 import { Users } from 'lucide-react'
 import { QuestionText, getActiveAlternatives } from '@/components/QuestionText'
@@ -307,7 +308,7 @@ export default function ApresentacaoPage({
     // Lowered timeout from 10000 — when the socket service isn't reachable
     // at all (current deployment), a shorter timeout means connect_error
     // fires sooner, so the HTTP polling fallback kicks in sooner too.
-    const socketInstance = io('/?XTransformPort=3003', {
+    const socketInstance = io(getSocketUrl(), {
       transports: ['websocket', 'polling'],
       forceNew: true,
       reconnection: true,

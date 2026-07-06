@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { io, Socket } from 'socket.io-client'
+import { getSocketUrl } from '@/lib/session'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { Users, Wifi, WifiOff, ArrowRight } from 'lucide-react'
@@ -377,7 +378,7 @@ export default function StudentVotingPage({
         // the socket service isn't reachable at all (current deployment),
         // a shorter timeout means connect_error fires sooner, so the HTTP
         // polling fallback kicks in sooner too.
-        const socket = io('/?XTransformPort=3003', {
+        const socket = io(getSocketUrl(), {
           transports: ['websocket', 'polling'],
           timeout: 3000,
           reconnection: true,

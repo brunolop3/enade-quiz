@@ -19,6 +19,7 @@ import {
 } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
 import { io, Socket } from 'socket.io-client'
+import { getSocketUrl } from '@/lib/session'
 import { toast } from 'sonner'
 import {
   Card,
@@ -1067,7 +1068,7 @@ export default function AdminPage() {
 
     const sessionCode = selectedSession.code
 
-    const socketInstance = io('/?XTransformPort=3003', {
+    const socketInstance = io(getSocketUrl(), {
       transports: ['websocket', 'polling'],
       forceNew: true,
       reconnection: true,
