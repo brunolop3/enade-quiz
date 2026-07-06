@@ -1,0 +1,339 @@
+=== All Formação Geral questions ===
+prisma:query SELECT `main`.`Question`.`id`, `main`.`Question`.`text`, `main`.`Question`.`imageUrl`, `main`.`Question`.`course`, `main`.`Question`.`year`, `main`.`Question`.`sessionId`, `main`.`Question`.`orderIndex` FROM `main`.`Question` WHERE `main`.`Question`.`course` LIKE ? ORDER BY `main`.`Question`.`orderIndex` ASC LIMIT ? OFFSET ?
+
+ID: cmqf8jn7z0001p52f6i5guvek | Order: 0
+Course: Formação Geral | Year: 2025 | Session: cmqf8jn7z0000p52fnoa2pfmk
+ImageUrl: null
+Text (first 1500): A Lei de Acesso à Informação (Lei nº 12.527/2011) estabelece que órgãos públicos devem disponibilizar informações de interesse público. Sobre o princípio da transparência na administração pública brasileira, é correto afirmar que:
+---
+
+ID: cmqfj1d580002p5l7zrhjf5na | Order: 0
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): TEXTO 1
+A Educação de Jovens e Adultos (EJA) é uma modalidade de ensino destinada a pessoas que não estão inseridas na educação regular por motivos diversos. Nesse contexto educacional, esse estudante possui uma história de vida, sobretudo por ser, efetivamente, um sujeito ativo nas esferas sociais.
+PEREIRA, P. F.; REINALDO, M. A. G. Ensino-aprendizagem de charge na EJA: uma experiência no contexto de estágio supervisionado. III CINTED (adaptado).
+TEXTO 2
+As concepções restritas veem a EJA apenas em seu caráter marginal e secundário, camuflando os aspectos políticos, culturais e pedagógicos. Sob uma abordagem sistêmica, a EJA é tratada como parte da história da educação do país e, como tal, uma modalidade importante no processo de democratização do direito à educação.
+ALMEIDA, A. EJA: uma educação para o trabalho ou para a classe trabalhadora? Revista Brasileira de Educação de Jovens e Adultos, 2016 (adaptado).
+Considerando os textos 1 e 2, a alternativa que apresenta uma ação pedagógica condizente com a abordagem sistêmica da EJA é
+---
+
+ID: cmqmqiync000ho0sxshg3xqh8 | Order: 0
+Course: Formação Geral | Year: 2025 | Session: cmqmqiyjo000fo0sxsdsge2d1
+ImageUrl: null
+Text (first 1500): TEXTO 1 Como resposta às mudanças climáticas, o Brasil tem ampliado o uso de fontes renováveis, como biocombustíveis e as fontes eólica e solar. No entanto, para criar uma trajetória progressiva de sustentabilidade ao longo do tempo, o País precisa considerar as relações socioeconômicas e ambientais, além das alterações na base tecnológica. Para isso, é fundamental considerar os impactos que a transição energética pode causar nas comunidades vulneráveis. Esses impactos podem ser positivos, mas também podem aprofundar as desigualdades vivenciadas por essas comunidades. Disponível em: https://www.epe.gov.br. Acesso em: 8 jun. 2025 (adaptado). TEXTO 2 Iniciada em meados de 2021, a instalação de um parque solar no município de Santa Luzia passou a impactar a comunidade quilombola de Pitombeira, situada no município vizinho de Várzea, no semiárido paraibano. Moradores passaram a sentir os impactos do desmatamento da vegetação nativa da Caatinga: deslocamento e(ou) morte de animais silvestres; aumento do trânsito e de pessoas "de fora"; rachaduras de casas e cisternas, em razão das explosões que foram realizadas durante a instalação dos painéis solares. Conforme uma liderança quilombola, os impactos serão sentidos a curto, médio e longo prazo. Estima-se que 335 hectares de mata nativa de Caatinga tenham sido completamente desmatados para a construção do parque mencionado. Houve o aterramento de riachos, açudes e lagoas no interior das fazendas, associado a ações de compactação e im
+---
+
+ID: cmqf8jn7z0002p52f5mu794nf | Order: 1
+Course: Formação Geral | Year: 2025 | Session: cmqf8jn7z0000p52fnoa2pfmk
+ImageUrl: null
+Text (first 1500): O conceito de desenvolvimento sustentável, amplamente discutido desde o Relatório Brundtland (1987), pressupõe a conciliação entre crescimento econômico, equidade social e preservação ambiental. No contexto brasileiro, qual das afirmações abaixo melhor reflete os desafios para a efetivação do desenvolvimento sustentável?
+---
+
+ID: cmqfj1d5b0004p5l70314hhxf | Order: 1
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): O letramento científico representa uma competência essencial no contexto educacional e tem como finalidade proporcionar que os indivíduos compreendam, apliquem e sejam críticos ao conhecimento científico a ser utilizado em suas vidas cotidianas.
+SOUSA, L. Q.; ABREU, K. F. Análise de Estudos e Pesquisas sobre Letramento Científico. Cadernos Cajuína, n. 4, 2024.
+Considerando o que representa o letramento científico, a equipe gestora de uma escola planeja organizar uma palestra com o objetivo de conscientizar a comunidade escolar de que a ciência
+---
+
+ID: cmqmqiync000jo0sxumqsyu6l | Order: 1
+Course: Formação Geral | Year: 2025 | Session: cmqmqiyjo000fo0sxsdsge2d1
+ImageUrl: null
+Text (first 1500): TEXTO 1 Art. 1º É instituída a Lei Brasileira de Inclusão da Pessoa com Deficiência (Estatuto da Pessoa com Deficiência), destinada a assegurar e a promover, em condições de igualdade, o exercício dos direitos e das liberdades fundamentais por pessoa com deficiência, visando à sua inclusão social e seu exercício de cidadania. Disponível em: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm. Acesso em: 25 maio 2025 (adaptado). TEXTO 2 No caso da cultura, a lei voltou-se diretamente à promoção daquilo que conhecemos como acessibilidade cultural, que pode ser compreendida como um conjunto de medidas que visam à eliminação de barreiras e à promoção da participação plena das pessoas com deficiência em políticas, programas, projetos e ações culturais. Essas ações propiciam à pessoa com deficiência ou com mobilidade reduzida a possibilidade de viver de forma independente e exercer seus direitos culturais. Disponível em: https://www.gov.br/cultura. Acesso em: 25 maio. 2025 (adaptado). A partir das informações apresentadas, é correto afirmar que a acessibilidade cultural é efetivada não somente com o acesso de pessoas com deficiência a bens culturais, mas também com a
+---
+
+ID: cmqf8jn7z0003p52fgf2npzs2 | Order: 2
+Course: Formação Geral | Year: 2025 | Session: cmqf8jn7z0000p52fnoa2pfmk
+ImageUrl: null
+Text (first 1500): A inteligência artificial (IA) tem transformado diversos setores da sociedade, desde a saúde até o mercado de trabalho. Considerando os aspectos éticos relacionados ao uso da IA, assinale a alternativa correta:
+---
+
+ID: cmqfj1d5c0006p5l7qrm5albx | Order: 2
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): Em uma reunião de planejamento, foi proposta uma discussão sobre os diferentes tipos de avaliação e suas aplicações no processo de ensino e de aprendizagem. Foram apresentadas as características e as funções das avaliações diagnóstica, formativa e somativa no contexto escolar. Os professores foram convidados a descrever suas práticas pedagógicas e a relacioná-las aos diferentes objetivos das avaliações.
+Entre as atividades avaliativas descritas, é associada à função formativa aquela que
+---
+
+ID: cmqmqiynd000no0sx1mhsp1om | Order: 2
+Course: Formação Geral | Year: 2025 | Session: cmqmqiyjo000fo0sxsdsge2d1
+ImageUrl: null
+Text (first 1500): De acordo com o Alto Comissariado das Nações Unidas para Refugiados (ACNUR), no final de 2023, estimava-se que 117,3 milhões de pessoas em todo o mundo foram deslocadas à força, o que representa um aumento de 8%, ou 8,8 milhões de pessoas, em relação ao final de 2022. Esses dados revelam aumentos anuais sucessivos na quantidade de pessoas forçadas a se deslocar. Disponível em: https://www.unhcr.org/global-trends-report-2023. Acesso em: 5 jun. 2025 (adaptado). Considerando-se essas informações e o que se refere aos movimentos migratórios no século XXI, é correto afirmar que os fluxos de pessoas forçadas a se deslocar
+---
+
+ID: cmqf8jn7z0004p52fiqod7ovq | Order: 3
+Course: Formação Geral | Year: 2025 | Session: cmqf8jn7z0000p52fnoa2pfmk
+ImageUrl: null
+Text (first 1500): O Estatuto da Pessoa com Deficiência (Lei nº 13.146/2015) garantiu direitos fundamentais para a inclusão social. Sobre a educação inclusiva no ensino superior brasileiro, é correto afirmar que:
+---
+
+ID: cmqfj1d5d0008p5l7wp1jo71p | Order: 3
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): As avaliações externas em larga escala, como o Sistema Nacional de Avaliação da Educação Básica (Saeb), são utilizadas como instrumentos de aferição da qualidade da Educação Básica no Brasil. Seu resultado é utilizado no cálculo do Índice de Desenvolvimento da Educação Básica (Ideb) das escolas. Uma determinada escola recebeu sua nota do Ideb, e o resultado ficou abaixo da média prevista. Diante disso, a direção fez uma reunião com o corpo docente para traçar metas para a melhoria do desempenho da escola.
+A análise dos resultados do Ideb deve orientar as ações pedagógicas para
+---
+
+ID: cmqmqiynd000lo0sxl4zx1ku9 | Order: 3
+Course: Formação Geral | Year: 2025 | Session: cmqmqiyjo000fo0sxsdsge2d1
+ImageUrl: null
+Text (first 1500): TEXTO 1 O cinema é um espetáculo e, salvo exceções, o filme não é concebido para ser um documento histórico. É feito em primeiro lugar para ser vendido, e não para ser conservado em um museu, ainda menos em arquivos. Isto, contudo, não o impede de deter funções sociais diferenciadas, exercidas por meio da imprensa profissional, da crítica e do discurso analítico recente. Nesses termos, a instituição cinematográfica produziu grandes categorias de classificação reformuladas pela televisão: jornais televisivos para informar, documentários para educar, ficção para distrair. Os filmes de ficção são ainda mais suspeitos, uma vez que têm uma função de divertimento, ainda que não raro um divertimento sério, quando se trata de colocar grandes problemas humanos e culturais, como puderam também fazer o teatro e o romance. Esses, com efeito, impõem questões contemporâneas, ou mesmo tentam testemunhar diretamente, principalmente nos períodos de crise, para informar e registrar uma memória visual e sonora dos eventos. Em certos casos específicos, pode-se mesmo solicitar ao cinema assumir um papel social ou político. LAGNY, M. O Cinema como Fonte de História. In: Cinematógrafo: um olhar sobre a História. Salvador: EDUFBA, 2009 (adaptado). TEXTO 2 Ainda Estou Aqui levou o prêmio de Melhor Filme Internacional no Oscar 2025. Essa foi a primeira vez que o Brasil trouxe o troféu para casa. Baseado no livro de Marcelo Rubens Paiva, o filme trata da morte do pai do autor, durante o período da dita
+---
+
+ID: cmqf8jn7z0005p52fethx9l7m | Order: 4
+Course: Formação Geral | Year: 2025 | Session: cmqf8jn7z0000p52fnoa2pfmk
+ImageUrl: null
+Text (first 1500): A democracia participativa complementa a democracia representativa por meio de mecanismos de engajamento direto dos cidadãos nas decisões públicas. No Brasil, qual instrumento exemplifica a democracia participativa?
+---
+
+ID: cmqfj1d5e000ap5l7qeq6adg4 | Order: 4
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: /uploads/enade-2025-q5-charge.png
+Text (first 1500): Motivado pela revisão da Lei n. 12 711/2012, ocorrida no ano de 2023, um professor do Ensino Médio propôs uma roda de conversa, utilizando a charge de jornal como recurso mobilizador para a discussão sobre os impactos das ações afirmativas no sistema educacional brasileiro. A atividade promoveu a reflexão e a crítica sobre os princípios do Plano Nacional de Educação em Direitos Humanos (PNEDH), como o respeito à dignidade humana e o exercício da cidadania democrática no Estado de Direito.
+LAERTE. Disponível em: www1.folha.uol.com.br. Acesso em: 12 maio 2025.
+A atividade proposta pelo professor possibilita ao estudante
+---
+
+ID: cmqmqiyng000ro0sxwvs4ej3p | Order: 4
+Course: Formação Geral | Year: 2025 | Session: cmqmqiyjo000fo0sxsdsge2d1
+ImageUrl: null
+Text (first 1500): Eventos climáticos extremos, como secas ou enchentes, estão se tornando cada vez mais frequentes e severos em razão da mudança climática. No entanto, as consequências da ocorrência desses eventos estão além das questões ambientais, uma vez que promovem o deslocamento involuntário de populações vulneráveis desencadeando uma complexa cadeia de impactos de natureza socioambiental, econômica, ecológica, jurídica, política, psicológica e até mesmo de identidade e pertencimento. O fenômeno do deslocamento forçado requer atenção e soluções eficazes para sua gerência, uma vez que a população afetada necessita de condições adequadas para sua sobrevivência a longo prazo. Assim, as cidades precisam desenvolver uma infraestrutura urbana capaz de responder às emergências, de se preparar de maneira proativa para futuros desafios e ainda de absorver e se adaptar a essas novas dinâmicas causadas por deslocamentos massivos, de forma a garantir a proteção e promoção dos direitos humanos dos deslocados internos. MATIAS, A. M. M. Paradiplomacia e urbanismo: possíveis aliadas na proteção da dignidade da pessoa humana dos deslocados internos. LIMONGI. A. A.; SOLDANO G. (Org.). In: Direito internacional do século XXI [e-book]: desafios globais contemporâneos. Santos: Editora Universitária Leopoldianum, p. 91, 2025 (adaptado). Considerando o texto apresentado, assinale a opção correta sobre o deslocamento interno de populações vulneráveis.
+---
+
+ID: cmqfajgit0001p5stdznpq9u6 | Order: 5
+Course: Formação Geral | Year: 2025 | Session: cmqf8jn7z0000p52fnoa2pfmk
+ImageUrl: /uploads/1781532607155-uems-logo.png
+Text (first 1500): Test with image
+---
+
+ID: cmqfj1d5f000cp5l7lsfzim25 | Order: 5
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): O espaço escolar é um lugar de convívio. Nele encontramos não apenas as relações das pessoas com o conhecimento, mas também o aprendizado de como as pessoas se relacionam entre si e com o restante do mundo. Exatamente por isso os conflitos aparecem, e a gestão da escola deve saber como lidar com eles. Por reproduzir as lógicas sociais, encontramos, também na escola, relações que desvalorizam o que é entendido como contra-hegemônico nas culturas. E isso impacta negativamente nas pessoas negras e nas praticantes das Religiões de Matrizes Africanas. Talvez os signos de Exu e de Ogum sejam boas pistas sobre como lidar com a escola na busca de espaços menos opressivos. Essas duas divindades do panteão iorubano são vinculadas aos caminhos, à comunicação, à política, aos conflitos e, de algum modo, à própria educação. Exu e Ogum nos ensinam que a convivência não precisa de uma suposição de que todas e todos pensem do mesmo modo, desejem do mesmo modo, caminhem pelos mesmos caminhos. Mas ensinam que o mundo é criado coletivamente e que, entre conflitos e andanças, devemos preservar as diferenças.
+NASCIMENTO, W. F. As religiões de matrizes africanas, resistência e contexto escolar: entre encruzilhadas. In: Memórias do Baobá II. Fortaleza: Editora UFC, 2017 (adaptado).
+Com base no texto e nas ações de enfrentamento ao racismo religioso no espaço escolar, é correto afirmar que a
+---
+
+ID: cmqmqiyne000po0sx419bulq8 | Order: 5
+Course: Formação Geral | Year: 2025 | Session: cmqmqiyjo000fo0sxsdsge2d1
+ImageUrl: null
+Text (first 1500): Um levantamento realizado em 2024 mostrou ligação entre o uso excessivo de redes sociais e o estado de saúde mental dos brasileiros. A pesquisa revelou que 65% dos entrevistados enfrentam dificuldades emocionais em algum grau. O uso intensivo de plataformas de redes sociais está associado a 45% dos casos de ansiedade em jovens de 15 a 29 anos de idade. Jovens que passam mais de três horas por dia em plataformas digitais têm um risco 30% maior de apresentar quadros de depressão, em comparação com aqueles que fazem um uso mais moderado. Cerca de 40% dos entrevistados relataram que sua autoestima é profundamente afetada pelo número de curtidas e comentários que recebem em suas postagens. Essa dependência de validação externa é mais pronunciada entre jovens que estão em fase de formação de identidade e são mais suscetíveis a julgamentos. Disponível em: https://veja.abril.com.br/saude/excesso-de-redes-sociais-esta-associado-a-45%-dos-casos-de-ansiedade-em-jovens. Acesso em: 25 jun. 2025 (adaptado). Considerando as informações do texto, assinale a opção que apresenta uma medida eficaz para prevenir os impactos negativos das redes sociais na saúde mental dos jovens, de forma a mitigar a causa de problemas como depressão e necessidade de validação externa.
+---
+
+ID: cmqfj1d5i000ep5l7vljcaw8r | Order: 6
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): Em O alienista, o protagonista da trama é Simão Bacamarte, médico que funda a clínica Casa Verde para pessoas com distúrbios mentais, na pequena cidade de Itaguaí. Simão começa a tratar as pessoas da cidade que apresentam sinais de loucura e passa a buscar, por meio de seus estudos, formas de estabelecer quais comportamentos da população podem ser considerados normais ou anormais, o que se torna uma obsessão. A história é relatada por um narrador-observador que, ironicamente, fundamenta sua narrativa no registro histórico das crônicas da vila de Itaguaí. Com temáticas distintas, porém universais, o estudante do Ensino Médio é convidado a acompanhar de perto as experiências de Simão Bacamarte e se depara com dilemas envolvendo ciência, ética, exclusão social, loucura, imortalidade, entre outros temas também ambientados no contexto da época retratada por Machado de Assis.
+Guia Digital do PNLD Literário 2021. Disponível em: www.pnld.nees.ufal.br. Acesso em: 15 maio 2025.
+Um grupo de professores do Ensino Médio utiliza a obra O alienista para desenvolver um Projeto de Vida que promova discussões sobre saúde mental e bem-estar coletivo na comunidade escolar. Essa obra foi selecionada por permitir o desenvolvimento de propostas pedagógicas que
+---
+
+ID: cmqmqiynl0017o0sxzp0ls436 | Order: 6
+Course: Formação Geral | Year: 2025 | Session: cmqmqiyjo000fo0sxsdsge2d1
+ImageUrl: null
+Text (first 1500): O número crescente de negociações exitosas para a repatriação de bens culturais no mundo mostra que se trata de uma ideia propícia ao nosso tempo, afirmou o diplomata Marco Antônio Nakata, diretor do Instituto Guimarães Rosa, órgão do Ministério das Relações Exteriores voltado para a diplomacia cultural. As negociações de restituição se dão de maneiras variadas e nem sempre partem dos governos; por vezes, comunidades locais pedem a restituição de objetos sagrados ou, no caso de fósseis, a comunidade científica nacional se mobiliza. Há, ainda, casos de museus e universidades que, por iniciativa própria, fazem a devolução. Disponível em: https://g1.globo.com/ciencia/noticia/2023/07/23/. Acesso em: 17 jul. 2025 (adaptado). Considerando o texto apresentado, que faz referência a um movimento mundial que defende a reterritorialização de objetos históricos, culturais e paleontológicos retirados dos seus países de origem durante a colonização ou ilegalmente comercializados nas últimas décadas, assinale a opção que apresenta um caso de reterritorialização ocorrido nos últimos anos.
+---
+
+ID: cmqfj1d5j000gp5l7i04ifoun | Order: 7
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): Ao realizar a matrícula em uma escola, uma estudante de 15 anos e seus pais solicitaram à secretaria acadêmica o uso de nome social, já que na certidão de nascimento consta uma identificação masculina. Eles queriam que o nome social fosse usado em sala de aula e em documentos internos da instituição, como chamada, boletins e carteirinha estudantil. No entanto, a direção, ao tomar ciência do caso, recusou o pedido, alegando que, sem a alteração no registro civil, seria impossível atender à solicitação.
+Diante do caso, com base na Resolução MEC n. 1/2018, que trata do uso do nome social, a gestão deve
+---
+
+ID: cmqmqiynl0019o0sxqu4uspkd | Order: 7
+Course: Formação Geral | Year: 2025 | Session: cmqmqiyjo000fo0sxsdsge2d1
+ImageUrl: /uploads/enade-2025-adm-fg-q8.png
+Text (first 1500): Na adolescência, quase todo gesto pode significar muito. A série Adolescência, da Netflix, mostrou que, apesar de emojis representarem emoções, objetos ou ideias quase sempre inofensivos, eles vêm sendo utilizados como uma forma de comunicação codificada entre adolescentes em plataformas digitais, sobretudo aquelas associadas a ideologias misóginas. Os emojis são comuns no universo de grupos como os incels, que são jovens que se autodenominam "celibatários involuntários". O termo incel está associado a uma subcultura on-line marcada por discursos de ódio e ressentimento contra mulheres. A imagem a seguir apresenta alguns emojis usados pelos adolescentes dessa subcultura. Disponível em: https://gq.globo.com/cultura/. Acesso em: 9 jun. 2025 (adaptado). Considerando o texto e as imagens apresentadas, assinale a opção correta, em relação ao papel dos símbolos na comunicação e na expressão no âmbito das comunidades digitais.
+---
+
+ID: cmqfj1d5k000ip5l74shpardc | Order: 8
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: /uploads/enade-2025-q9-q10-pnld.png
+Text (first 1500): Texto para questões 09 e 10
+TEXTO 1
+O Programa Nacional do Livro e do Material Didático (PNLD), regulamentado pelo Decreto n. 12 021/2024, que altera o Decreto n. 9 099/2017, tem como objetivos avaliação, aquisição e distribuição de materiais didáticos e demais materiais de apoio à prática educativa para toda a rede pública de ensino básico do país. Os materiais inscritos, avaliados, selecionados e disponíveis para a escolha chegam às escolas participantes do PNLD de forma sistemática, regular e gratuita. As etapas que compõem o processo de avaliação estão apresentadas a seguir:
+Disponível em: www.gov.br. Acesso em: 1 ago. 2025 (adaptado).
+TEXTO 2
+Os livros escolares assumem, conjuntamente ou não, múltiplas funções:
+• Função referencial: expressa a noção de que os livros didáticos são suportes privilegiados de conteúdos, de conhecimentos e de técnicas, estando relacionados àquilo que é considerado importante para determinado grupo social.
+• Função instrumental: o livro didático coloca em prática métodos de aprendizagem, propõe exercícios ou atividades que facilitam a memorização de conhecimentos, favorece a aquisição de competências disciplinares e a apropriação de habilidades.
+• Função ideológica e cultural: o livro didático afirma-se como um dos vetores essenciais da língua, da cultura e dos valores das classes dirigentes. Instrumento privilegiado de construção simbólica de identidade, assume um importante papel político.
+• Função documental: o livro didático fornece um con
+---
+
+ID: cmqmqiyni000to0sxbn0yus0c | Order: 8
+Course: Formação Geral | Year: 2025 | Session: cmqmqiyjo000fo0sxsdsge2d1
+ImageUrl: /uploads/enade-2025-adm-fg-q9.png
+Text (first 1500): TEXTO 1 O Estatuto da Criança e do Adolescente (ECA), que completou 35 anos em 2025, estabelece o seguinte: Art. 3º - A criança e o adolescente gozam de todos os direitos fundamentais inerentes à pessoa humana, sem prejuízo da proteção integral de que trata esta Lei, assegurando-se-lhes, por lei ou por outros meios, todas as oportunidades e facilidades, a fim de lhes facultar o desenvolvimento físico, mental, moral, espiritual e social, em condições de liberdade e de dignidade. Parágrafo único. Os direitos enunciados nesta Lei aplicam-se a todas as crianças e adolescentes, sem discriminação de nascimento, situação familiar, idade, sexo, raça, etnia ou cor, religião ou crença, deficiência, condição pessoal de desenvolvimento e aprendizagem, condição econômica, ambiente social, região e local de moradia ou outra condição que diferencie as pessoas, as famílias ou a comunidade em que vivem. BRASIL. Lei Federal n. 8.069, de 13 de julho de 1990. Estatuto da Criança e do Adolescente. TEXTO 2 Crianças e adolescentes em insegurança alimentar por cor/raça UNICEF. Pobreza multidimensional na infância e adolescência no Brasil, 2017-2025. Brasília: Unicef, 2025, p. 40. Disponível em: https://www.unicef.org/brazil/. Acesso em: 20 maio 2025 (adaptado). Considerando-se as informações dos Textos 1 e 2, os quais abordam, respectivamente, o ECA e dados de insegurança alimentar entre crianças e adolescentes no Brasil, é correto afirmar que
+---
+
+ID: cmqfj1d5m000kp5l76vzsff1f | Order: 9
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: /uploads/enade-2025-q9-q10-pnld.png
+Text (first 1500): Texto para questões 09 e 10
+TEXTO 1
+O Programa Nacional do Livro e do Material Didático (PNLD), regulamentado pelo Decreto n. 12 021/2024, que altera o Decreto n. 9 099/2017, tem como objetivos avaliação, aquisição e distribuição de materiais didáticos e demais materiais de apoio à prática educativa para toda a rede pública de ensino básico do país. Os materiais inscritos, avaliados, selecionados e disponíveis para a escolha chegam às escolas participantes do PNLD de forma sistemática, regular e gratuita. As etapas que compõem o processo de avaliação estão apresentadas a seguir:
+Disponível em: www.gov.br. Acesso em: 1 ago. 2025 (adaptado).
+TEXTO 2
+Os livros escolares assumem, conjuntamente ou não, múltiplas funções:
+• Função referencial: expressa a noção de que os livros didáticos são suportes privilegiados de conteúdos, de conhecimentos e de técnicas, estando relacionados àquilo que é considerado importante para determinado grupo social.
+• Função instrumental: o livro didático coloca em prática métodos de aprendizagem, propõe exercícios ou atividades que facilitam a memorização de conhecimentos, favorece a aquisição de competências disciplinares e a apropriação de habilidades.
+• Função ideológica e cultural: o livro didático afirma-se como um dos vetores essenciais da língua, da cultura e dos valores das classes dirigentes. Instrumento privilegiado de construção simbólica de identidade, assume um importante papel político.
+• Função documental: o livro didático fornece um con
+---
+
+ID: cmqmqiyni000vo0sxng1nsdll | Order: 9
+Course: Formação Geral | Year: 2025 | Session: cmqmqiyjo000fo0sxsdsge2d1
+ImageUrl: null
+Text (first 1500): A diáspora científica é composta por pesquisadores com mestrado, doutorado ou pós-doutorado que deixam o país e não retornam. Uma pesquisa financiada pela Fundação de Amparo à Pesquisa do Estado de São Paulo (Fapesp) analisou a diáspora científica brasileira a partir de uma amostra de 1 200 pessoas em vários países. Ao todo, 67% disseram estar no exterior trabalhando, 31% estavam estudando e 2% não estavam nem estudando, nem trabalhando. Apenas 12% estavam desempregados quando saíram do Brasil. Entre aqueles que querem retornar ao país, muitos não o fazem por falta de oportunidade. A ideia de repatriação é relevante para aqueles que querem retornar, mas ela não é compreendida como uma opção única para todos os casos. A migração não é considerada uma perda permanente para o País se o membro da diáspora continuar contribuindo para a realização de pesquisas nacionais. Podem ser estabelecidas estratégias de engajamento com os membros da diáspora, que vão além de seu retorno físico ao país de origem. Disponível em: https://theconversation.com/. Acesso em: 2 jun. 2025 (adaptado). Considerando o texto, assinale a opção que apresenta uma estratégia adequada para motivar pesquisadores que migraram do Brasil para o exterior a continuarem colaborando para o desenvolvimento da ciência, da inovação e da tecnologia do país.
+---
+
+ID: cmqfj1d5n000mp5l791l5o0k3 | Order: 10
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): Texto para questões 11 e 12
+TEXTO 1
+As questões ambientais são um tema de preocupação social, econômica e política que perpassam a escola. Elas aparecem na esfera política quando o governo federal reconhece a importância de sediar em Belém, no Pará, a 30ª Conferência das Nações Unidas sobre Mudanças Climáticas (COP30). O evento trará um olhar global sobre as soluções para os desafios do clima. É urgente que abordemos, de forma abrangente e sinérgica, as crises globais interligadas à mudança do clima e à perda de biodiversidade no contexto mais amplo da realização dos Objetivos de Desenvolvimento Sustentável (ODS). Ao fazer isso, devemos continuar reconhecendo e expandindo o papel e as contribuições dos povos indígenas e das comunidades locais na administração da natureza e na liderança climática, ao mesmo tempo que reconhecemos os efeitos desproporcionais que eles sofrem com a mudança do clima.
+Disponível em: www.cop30.br. Acesso em: 1 ago. 2025 (adaptado).
+TEXTO 2
+Chuva ácida
+Enquanto ser humano eu vou destruindo o que posso
+O elevador aqui só desce, o demônio é meu sócio
+Abriram, uh, a caixa de Pandora
+Simon diz: saiam agora
+A chuva espalhando, todos os males
+Ai ai, uiui, ai como isso arde
+É bateria de celulares, césio, similares
+A peste invisível maculando os ares
+Mercúrio nos rios, diesel nos mares
+solo estéril, já fizeram sua parte (uh)
+CRIOLO. Disponível em: www.letras.mus.br. Acesso em: 1 ago. 2025 (adaptado).
+Uma professora organiza um conjunto de ações para discussão
+---
+
+ID: cmqmqiynj000xo0sxmhmf2w6i | Order: 10
+Course: Formação Geral | Year: 2025 | Session: cmqmqiyjo000fo0sxsdsge2d1
+ImageUrl: null
+Text (first 1500): TEXTO 1 A escala de trabalho é um elemento fundamental na organização das atividades laborais e corresponde ao período em que o trabalhador está à disposição da empresa. Ela determina as horas de trabalho, os dias da semana e os turnos de trabalho. No Brasil, são utilizados diversos tipos de escala, que variam conforme a natureza da função e as necessidades operacionais da empresa. No entanto, todas devem respeitar os limites impostos pela legislação vigente, que indica uma jornada de trabalho máxima de 44 horas semanais e de 220 horas mensais, exceto em casos previstos em convenções coletivas ou acordos de trabalho. É importante ressaltar que a escolha do modelo de escala influencia diretamente a produtividade e o bem-estar das pessoas. Exemplo disso são as críticas crescentes que a escala de trabalho 6x1 (correspondente a 6 dias de trabalho e 1 dia de folga, por semana) tem recebido, pelos efeitos que ela promove sobre a saúde, a produtividade e a vida pessoal dos trabalhadores. ECODEBATE. Escala de trabalho 6x1 é desumana e ineficiente. Disponível em: https://www.ecodebate.com.br/. Acesso em: 3 jun. 2025 (adaptado). TEXTO 2 Dá nova redação ao inciso XIII do artigo 7º da Constituição Federal para dispor sobre a redução da jornada de trabalho para quatro dias por semana no Brasil. [...] XIII – duração do trabalho normal não superior a oito horas diárias e trinta e seis horas semanais, com jornada de trabalho de quatro dias por semana, facultada a compensação de horários e a 
+---
+
+ID: cmqfj1d5o000op5l7wcftgbdu | Order: 11
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): Texto para questões 11 e 12
+TEXTO 1
+As questões ambientais são um tema de preocupação social, econômica e política que perpassam a escola. Elas aparecem na esfera política quando o governo federal reconhece a importância de sediar em Belém, no Pará, a 30ª Conferência das Nações Unidas sobre Mudanças Climáticas (COP30). O evento trará um olhar global sobre as soluções para os desafios do clima. É urgente que abordemos, de forma abrangente e sinérgica, as crises globais interligadas à mudança do clima e à perda de biodiversidade no contexto mais amplo da realização dos Objetivos de Desenvolvimento Sustentável (ODS). Ao fazer isso, devemos continuar reconhecendo e expandindo o papel e as contribuições dos povos indígenas e das comunidades locais na administração da natureza e na liderança climática, ao mesmo tempo que reconhecemos os efeitos desproporcionais que eles sofrem com a mudança do clima.
+Disponível em: www.cop30.br. Acesso em: 1 ago. 2025 (adaptado).
+TEXTO 2
+Chuva ácida
+Enquanto ser humano eu vou destruindo o que posso
+O elevador aqui só desce, o demônio é meu sócio
+Abriram, uh, a caixa de Pandora
+Simon diz: saiam agora
+A chuva espalhando, todos os males
+Ai ai, uiui, ai como isso arde
+É bateria de celulares, césio, similares
+A peste invisível maculando os ares
+Mercúrio nos rios, diesel nos mares
+solo estéril, já fizeram sua parte (uh)
+CRIOLO. Disponível em: www.letras.mus.br. Acesso em: 1 ago. 2025 (adaptado).
+Considere que essa professora atua em uma escola localizada
+---
+
+ID: cmqmqiynk000zo0sxp76jywwv | Order: 11
+Course: Formação Geral | Year: 2025 | Session: cmqmqiyjo000fo0sxsdsge2d1
+ImageUrl: null
+Text (first 1500): No povo Xakriabá, existem diferentes perfis de conhecedores da tradição. As mulheres são responsáveis pelas roças. Os homens trabalham, mas apenas durante a derrubada. A partir da plantação, toda a responsabilidade é da mulher: plantio, colheita, preparo, cozimento e produção dos alimentos. As mulheres também são responsáveis pela transmissão do conhecimento à família, atuando como guardiãs da biodiversidade e promovendo a circulação de sementes no território, mantendo uma rede de trocas. Os momentos de colheita reúnem as famílias em torno da contação de histórias, interação que contribui para a preservação da língua. O artesanato também é, na maioria das vezes, produzido pelas mulheres, que repassam as técnicas às suas filhas. O período de estudo do barro representa um período em que não existia a presença da instituição escola, mas já havia a educação indígena, transmitida pelo entoar da palavra. As pinturas corporais, que também fazem parte dessa cultura, ao marcarem a identidade no contato entre o corpo e o espírito, foram, por muito tempo, reproduzidas em cerâmicas depositadas na terra. A cerâmica foi, portanto, um elemento muito importante, porque serviu mais tarde como um mostruário das pinturas corporais. XAKRIABÁ, C. Amansar o giz. Piseagrama, Belo Horizonte, n. 14, p. 110-117, jul. 2020 (adaptado). Com base no texto e considerando a relação do povo Xakriabá com o seu território, assinale a opção que apresenta um método ativo de conservação do meio ambiente.
+---
+
+ID: cmqfj1d5p000qp5l7g6rjft8k | Order: 12
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): Texto para questões 13 e 14
+Em uma turma de Educação de Jovens e Adultos (EJA), um professor de História e licenciandos do Estágio Supervisionado sentiram dificuldades em desenvolver as atividades planejadas na aula, pois os estudantes estavam dispersos, desanimados e afirmavam estar cansados da jornada de trabalho. Buscando motivar a turma, o professor-supervisor e os estagiários solicitaram aos estudantes que relatassem seus cotidianos profissionais. Identificou-se que as profissões de motorista de aplicativo e de entregador autônomo eram as mais exercidas. Além disso, o professor realizou reflexões com a turma sobre as mudanças no mundo do trabalho ao longo do tempo e suas relações sociais e econômicas. Durante o intervalo, o professor compartilhou a experiência com as colegas docentes de Língua Portuguesa e de Matemática que decidiram readequar seus planejamentos para explorar o mundo do trabalho em suas aulas. A professora de Língua Portuguesa elaborou, coletivamente com a turma, um pequeno texto sobre as dificuldades enfrentadas no contexto de trabalho e as expectativas em relação ao futuro profissional. Por sua vez, a professora de Matemática tratou das unidades de medida e do conceito de proporção, abordando problemas com cálculos que envolviam quantidades, distâncias e porcentagem relativos ao consumo de combustível e a outros itens utilizados no campo profissional dos estudantes. Na semana seguinte, como atividade avaliativa do Estágio Supervisionado, o professor-su
+---
+
+ID: cmqmqiynl0015o0sxc8i2u51b | Order: 12
+Course: Formação Geral | Year: 2025 | Session: cmqmqiyjo000fo0sxsdsge2d1
+ImageUrl: null
+Text (first 1500): A implantação do teletrabalho no Tribunal de Justiça de Pernambuco (TJPE) representa um marco significativo na modernização das atividades judiciais e administrativas, alinhando-se às demandas contemporâneas de eficiência, flexibilidade e sustentabilidade ambiental. Essa modalidade de trabalho trouxe oportunidades relevantes, como a redução de custos operacionais, a descentralização das atividades e o aprimoramento da qualidade de vida dos servidores. Além disso, impulsionou a transformação digital da instituição, fortalecendo o uso de ferramentas tecnológicas e promovendo maior celeridade processual. MACHADO, M.; SANTOS, M. Teletrabalho: desafios, oportunidades e impactos na dinâmica do trabalho contemporâneo. Revista Ibero-Americana de Humanidades, Ciências e Educação, São Paulo, v. 11, n. 1, jan. 2025 (adaptado). Considerando as informações do texto, assinale a opção que apresenta uma estratégia que viabilizaria a consolidação do teletrabalho como prática eficiente e sustentável na administração pública.
+---
+
+ID: cmqfj1d5q000sp5l7k4mwl6bd | Order: 13
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): Texto para questões 13 e 14
+Em uma turma de Educação de Jovens e Adultos (EJA), um professor de História e licenciandos do Estágio Supervisionado sentiram dificuldades em desenvolver as atividades planejadas na aula, pois os estudantes estavam dispersos, desanimados e afirmavam estar cansados da jornada de trabalho. Buscando motivar a turma, o professor-supervisor e os estagiários solicitaram aos estudantes que relatassem seus cotidianos profissionais. Identificou-se que as profissões de motorista de aplicativo e de entregador autônomo eram as mais exercidas. Além disso, o professor realizou reflexões com a turma sobre as mudanças no mundo do trabalho ao longo do tempo e suas relações sociais e econômicas. Durante o intervalo, o professor compartilhou a experiência com as colegas docentes de Língua Portuguesa e de Matemática que decidiram readequar seus planejamentos para explorar o mundo do trabalho em suas aulas. A professora de Língua Portuguesa elaborou, coletivamente com a turma, um pequeno texto sobre as dificuldades enfrentadas no contexto de trabalho e as expectativas em relação ao futuro profissional. Por sua vez, a professora de Matemática tratou das unidades de medida e do conceito de proporção, abordando problemas com cálculos que envolviam quantidades, distâncias e porcentagem relativos ao consumo de combustível e a outros itens utilizados no campo profissional dos estudantes. Na semana seguinte, como atividade avaliativa do Estágio Supervisionado, o professor-su
+---
+
+ID: cmqmqiynk0011o0sx97sw6yqs | Order: 13
+Course: Formação Geral | Year: 2025 | Session: cmqmqiyjo000fo0sxsdsge2d1
+ImageUrl: /uploads/enade-2025-adm-fg-q14.png
+Text (first 1500): TEXTO 1 Os dados referentes ao censo da educação superior de 2023 retratam o aumento do número de alunos com deficiência matriculados no ensino superior, que apresentou um crescimento de 17% em relação aos dados de 2022, superior à taxa de crescimento do total de alunos matriculados no território brasileiro, equivalente a 5,6% no mesmo período. Embora esse crescimento seja expressivo, em termos de representatividade, a presença de alunos com deficiência é de apenas 0,93% do número do total de matrículas, que em 2023 foi de quase 10 milhões de alunos. Nesse mesmo ano, foram registrados 92 756 alunos com deficiência matriculados no ensino superior. O censo também revelou que 12 651 alunos com deficiência concluíram seus cursos. Disponível em: https://diariopcd.com.br/2024/11/03/cresce-numero-de-alunos-com-deficiencia-no-ensino-superior/. Acesso em: 15 jun. 2025 (adaptado). TEXTO 2 Total de matrículas de graduação conforme o tipo de deficiência, transtorno global do desenvolvimento ou altas habilidades/superdotação declarados – Brasil – 2023 BRASIL. Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira. Resumo técnico do Censo da Educação Superior 2023 [recurso eletrônico]. Disponível em: https://portal.inep.gov.br. Acesso em: 15 jun. 2025 (adaptado). Acerca da matrícula de pessoas com deficiência no ensino superior no Brasil, conclui-se, a partir dos Textos 1 e 2, que
+---
+
+ID: cmqfj1d5s000up5l7j1x0vuvf | Order: 14
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): O acesso à internet e aos recursos tecnológicos, como dispositivos móveis e outros, vem crescendo na atualidade, impactando os sistemas educacionais no Brasil e no mundo. Com isso, o uso de Metodologias Ativas foi intensificado, visando atender às diferentes demandas da comunidade escolar. Muitas dessas metodologias são implementadas via plataformas digitais, excluindo uma parcela considerável de estudantes que não têm acesso a tais plataformas devido a desigualdades sociais, conforme apontam dados do Instituto Brasileiro de Geografia e Estatística (IBGE). Os dados indicam que cerca de 60% das pessoas não possuem acesso à internet devido aos altos custos dos serviços e dos equipamentos.
+IBGE. Pesquisa Nacional por Amostra de Domicílios Contínua. Rio de Janeiro: IBGE, 2023 (adaptado).
+Nesse contexto, uma atividade de ensino que utilize Metodologias Ativas na Educação Básica para minimizar a exclusão na sala de aula é
+---
+
+ID: cmqmqiynk0013o0sxcdandwvx | Order: 14
+Course: Formação Geral | Year: 2025 | Session: cmqmqiyjo000fo0sxsdsge2d1
+ImageUrl: /uploads/enade-2025-adm-fg-q15.png
+Text (first 1500): Domicílios com esgotamento sanitário e taxa de mortalidade infantil por regiões – Brasil – 2022 (%) IBGE. Dados de Esgotamento Sanitário. Censo 2022. Dados de Mortalidade Infantil, Ministério da Saúde/SVS. Sistema de Informações sobre Mortalidade (SIM), 2022 (adaptado). A melhora da saúde pública, mediante ações preventivas, ainda é um desafio, principalmente em relação ao saneamento, pois a eficiência, a qualidade e a universalidade desse serviço público são fundamentais para a qualidade de vida da população. O saneamento básico é um dos serviços de infraestrutura cuja ausência ou precariedade causa diversos problemas econômicos, ambientais, sociais e de saúde, com significativas perdas materiais e humanas. O saneamento é um serviço vinculado à saúde pública e demanda grandes investimentos, sendo a universalização um dos objetivos a serem alcançados pelo governo. Disponível em: https://bnb.gov.br/revista/. Acesso em: 12 de jun. 2025 (adaptado). Os dados de esgotamento sanitário e de mortalidade infantil apresentados evidenciam
+---
+
+ID: cmqfj1d5t000wp5l7542o7py0 | Order: 15
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): A Educação do Campo emerge da discussão de diálogos com movimentos sociais e em diferentes eventos, como as Conferências Nacionais por uma Educação Básica do Campo. Normativas foram promulgadas, tais como a Resolução CEB/CNE n. 1/2002, que institui Diretrizes Operacionais para a Educação Básica nas Escolas do Campo, em prol de um projeto que continue a "luta para que os sistemas de ensino discutam um currículo para a área rural e que a formação de professores, inicial, continuada ou em serviço, não reproduza o currículo da área urbana na rural".
+ALENCAR, M. F. S. Educação do Campo e a formação de professores: construção de uma política educacional para o campo brasileiro. Ci. & Tróp., n. 2, 2010 (adaptado).
+Nesse contexto, a formação do professor para a Educação do Campo tem como princípio
+---
+
+ID: cmqfj1d5v000yp5l7k06qjubl | Order: 16
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): A História da Educação no Brasil pode ser organizada em períodos com características específicas de paradigmas educacionais de cada época, a exemplo da Escola Nova (décadas de 1920-1930), cujas práticas pedagógicas
+---
+
+ID: cmqfj1d5w0010p5l770e2a918 | Order: 17
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): Com a intenção de valorizar a presença de estudantes indígenas em uma turma do Ensino Médio, uma professora de Filosofia apresentou o pensamento do escritor indígena Daniel Munduruku: "um caçador aprende com um caçador mais experiente; um jovem aprende sua arte na medida em que é capaz de reproduzir a arte dos mais velhos". Essa ideia aborda diferentes formas de transmissão de conhecimento por meio da oralidade e da experiência cotidiana.
+Pensando nisso, a professora organizou uma proposta pedagógica envolvendo a história de vida dos estudantes e suas experiências com foco no uso da mandioca (aipim ou macaxeira), da qual se faz, por exemplo, a tapioca – um alimento ancestral bastante consumido atualmente. Para isso, buscou-se a memória social das famílias por meio de entrevistas informais sobre os conhecimentos de plantio, de colheita e de preparo da mandioca até o seu consumo na comunidade, a fim de integrar conhecimentos ancestrais ao currículo escolar.
+Assinale a alternativa que apresenta uma proposta pedagógica que fomente a cooperação entre escola, família e comunidade em relação às populações indígenas.
+---
+
+ID: cmqfj1d5y0012p5l761y91kmx | Order: 18
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): Uma professora, diante da existência de um aterro no entorno da escola, decidiu abordar o tema da sustentabilidade e do descarte consciente com seus estudantes. Para isso, solicitou que eles elaborassem um projeto, e a turma sugeriu as seguintes ações:
+• convidar trabalhadores de coleta seletiva e participantes de movimentos sociais de preservação do meio ambiente para uma roda de conversa;
+• realizar uma ação com os familiares para aprenderem técnicas de limpeza e separação de material reciclável;
+• conduzir uma dinâmica coletiva em que os estudantes troquem materiais descartados por brindes variados.
+Em uma perspectiva crítica da Educação Ambiental, as ações propostas pelos estudantes
+---
+
+ID: cmqfj1d600014p5l7d10ypxzj | Order: 19
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): Texto para questões 20 e 21
+Com base nos princípios da Pedagogia de Projetos e em articulação com os Objetivos de Desenvolvimento Sustentável (ODS), especialmente o ODS 12, que trata da produção e do consumo responsáveis, os professores de uma escola pública de Ensino Fundamental desenvolveram um projeto interdisciplinar com o intuito de promover ações educativas sobre o reaproveitamento de resíduos orgânicos na escola. A iniciativa incluiu o desenvolvimento de atividades de separação e de aproveitamento de resíduos da alimentação escolar, bem como a montagem de composteiras artesanais para a produção e o uso de adubo em jardins e hortas da escola.
+Com base na situação descrita, a ação educativa que intervém concretamente no contexto escolar é
+---
+
+ID: cmqfj1d620016p5l7roblwbbu | Order: 20
+Course: Formação Geral Docente | Year: 2025 | Session: cmqfj15ri0000p5l78cqfp7e0
+ImageUrl: null
+Text (first 1500): Texto para questões 20 e 21
+Com base nos princípios da Pedagogia de Projetos e em articulação com os Objetivos de Desenvolvimento Sustentável (ODS), especialmente o ODS 12, que trata da produção e do consumo responsáveis, os professores de uma escola pública de Ensino Fundamental desenvolveram um projeto interdisciplinar com o intuito de promover ações educativas sobre o reaproveitamento de resíduos orgânicos na escola. A iniciativa incluiu o desenvolvimento de atividades de separação e de aproveitamento de resíduos da alimentação escolar, bem como a montagem de composteiras artesanais para a produção e o uso de adubo em jardins e hortas da escola.
+Com base no projeto desenvolvido, a alternativa que, sob uma perspectiva crítica, apresenta a relação coerente entre o procedimento metodológico e a avaliação da aprendizagem sobre o consumo responsável de alimentos é um(a)
+---

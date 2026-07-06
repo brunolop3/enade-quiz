@@ -1,0 +1,97 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Session {
+  id                    String    @id @default(cuid())
+  code                  String    @unique
+  title                 String
+  status                String    @default("waiting")
+  currentQuestionId     String?
+  requireIdentification Boolean   @default(true)
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+  questions             Question[]
+  students              Student[]
+}
+
+model Question {
+  id            String   @id @default(cuid())
+  sessionId     String
+  session       Session  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  text          String
+  year          Int
+  course        String   @default("Formação Geral")
+  altA          String
+  altB          String
+  altC          String
+  altD          String
+  altE          String
+  correctAnswer String
+  imageUrl      String?
+  isRevealed    Boolean  @default(false)
+  orderIndex    Int      @default(0)
+  votes         Vote[]
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([sessionId])
+}
+
+model Student {
+  id        String   @id @default(cuid())
+  sessionId String
+  session   Session  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  name      String
+  rgm       String
+  score     Int      @default(0)
+  answers   Int      @default(0)
+  corrects  Int      @default(0)
+  joinedAt  DateTime @default(now())
+  votes     Vote[]
+
+  @@unique([sessionId, rgm])
+  @@index([sessionId])
+}
+
+model Vote {
+  id         String   @id @default(cuid())
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  studentId  String?
+  student    Student? @relation(fields: [studentId], references: [id], onDelete: SetNull)
+  choice     String
+  isCorrect  Boolean  @default(false)
+  votedAt    DateTime @default(now())
+
+  @@index([questionId])
+  @@index([studentId])
+}
+
+model QuestionBank {
+  id            String   @id @default(cuid())
+  title         String
+  text          String
+  year          Int
+  course        String   @default("Formação Geral")
+  altA          String
+  altB          String
+  altC          String
+  altD          String
+  altE          String   @default("")
+  correctAnswer String
+  imageUrl      String?
+  category      String   @default("Geral")
+  tags          String   @default("")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([category])
+  @@index([course])
+}
