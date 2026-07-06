@@ -44,11 +44,15 @@ export async function GET(
       )
     }
 
-    // Cache curto: sessão muda quando questões são ativadas/gabarito revelado
-    // stale-while-revalidate permite resposta instantânea enquanto revalida
+    // Sem cache de CDN: votar/apresentacao fazem polling HTTP como fallback
+    // do tempo real (nao ha socket service no deploy atual), entao esta
+    // rota precisa refletir o estado atual a cada chamada — um
+    // s-maxage>0 aqui fazia o Vercel Edge servir uma resposta em cache
+    // por ate 5s (e "stale" por ate 30s), independente da frequencia do
+    // polling no cliente.
     return NextResponse.json(session, {
       headers: {
-        'Cache-Control': 'public, s-maxage=5, stale-while-revalidate=30',
+        'Cache-Control': 'no-store',
       },
     })
   } catch (error) {

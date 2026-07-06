@@ -300,8 +300,9 @@ export default function ApresentacaoPage({
     fetchSession()
   }, [fetchSession])
 
+  const hasSession = session !== null
   useEffect(() => {
-    if (!session) return
+    if (!hasSession) return
 
     // Lowered timeout from 10000 — when the socket service isn't reachable
     // at all (current deployment), a shorter timeout means connect_error
@@ -445,7 +446,13 @@ export default function ApresentacaoPage({
       setSocketReconnecting(false)
       socketDisconnectSinceRef.current = null
     }
-  }, [session, codigo, fetchSession, currentQuestionId])
+    // `hasSession` (not `session`) is the dependency on purpose: `session`
+    // gets a brand-new object reference on every poll tick (setSession(data)
+    // with freshly-parsed JSON), which was tearing down and recreating the
+    // socket every ~1.5s — that's what caused the connection badge to
+    // flicker between "Desconectado" and "Reconectando...". Only the
+    // presence of a session (not its content) should trigger a reconnect.
+  }, [hasSession, codigo, fetchSession, currentQuestionId])
 
   // ── Polling fallback: if the socket has been disconnected for more than
   //    1.5 seconds, fetch /api/session/${codigo} every 1.5 seconds to sync
