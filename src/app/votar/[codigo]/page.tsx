@@ -314,14 +314,17 @@ export default function StudentVotingPage({
     }
   }, [codigo, determineState, recalculateScore])
 
-  // Poll every 3s once the socket has been down for more than 5s.
+  // Poll every 1.5s once the socket has been down for more than 1.5s.
+  // (Lowered from 5s/3s — in the current deployment the socket never
+  // connects at all, so waiting 5s before even starting to poll just adds
+  // dead time on top of every admin action.)
   useEffect(() => {
     const interval = setInterval(() => {
       const since = socketDisconnectSinceRef.current
-      if (since !== null && Date.now() - since > 5000) {
+      if (since !== null && Date.now() - since > 1500) {
         pollSessionState()
       }
-    }, 3000)
+    }, 1500)
     return () => clearInterval(interval)
   }, [pollSessionState])
 
@@ -370,10 +373,13 @@ export default function StudentVotingPage({
           setPageState(state)
         }
 
-        // Connect socket (non-blocking)
+        // Connect socket (non-blocking). Lowered timeout from 10000 — when
+        // the socket service isn't reachable at all (current deployment),
+        // a shorter timeout means connect_error fires sooner, so the HTTP
+        // polling fallback kicks in sooner too.
         const socket = io('/?XTransformPort=3003', {
           transports: ['websocket', 'polling'],
-          timeout: 10000,
+          timeout: 3000,
           reconnection: true,
           reconnectionAttempts: Infinity,
           reconnectionDelay: 1000,

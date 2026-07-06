@@ -303,6 +303,9 @@ export default function ApresentacaoPage({
   useEffect(() => {
     if (!session) return
 
+    // Lowered timeout from 10000 — when the socket service isn't reachable
+    // at all (current deployment), a shorter timeout means connect_error
+    // fires sooner, so the HTTP polling fallback kicks in sooner too.
     const socketInstance = io('/?XTransformPort=3003', {
       transports: ['websocket', 'polling'],
       forceNew: true,
@@ -310,7 +313,7 @@ export default function ApresentacaoPage({
       reconnectionAttempts: Infinity,
       reconnectionDelay: 1000,
       reconnectionDelayMax: 5000,
-      timeout: 10000,
+      timeout: 3000,
     })
 
     socketInstance.on('connect', () => {
@@ -445,16 +448,19 @@ export default function ApresentacaoPage({
   }, [session, codigo, fetchSession, currentQuestionId])
 
   // ── Polling fallback: if the socket has been disconnected for more than
-  //    5 seconds, fetch /api/session/${codigo} every 3 seconds to sync state
-  //    (currentQuestionId, isRevealed). Stops polling once the socket reconnects.
+  //    1.5 seconds, fetch /api/session/${codigo} every 1.5 seconds to sync
+  //    state (currentQuestionId, isRevealed, vote tallies). Stops polling
+  //    once the socket reconnects. (Lowered from 5s/3s — in the current
+  //    deployment the socket never connects at all, so the old thresholds
+  //    just added dead time on top of every admin action.)
   useEffect(() => {
     if (!session) return
     const interval = setInterval(() => {
       const since = socketDisconnectSinceRef.current
-      if (since !== null && Date.now() - since > 5000) {
+      if (since !== null && Date.now() - since > 1500) {
         pollSessionState()
       }
-    }, 3000)
+    }, 1500)
     return () => clearInterval(interval)
   }, [session, pollSessionState])
 

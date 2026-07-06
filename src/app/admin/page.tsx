@@ -1621,8 +1621,16 @@ export default function AdminPage() {
       options: { maxRetries?: number; waitConnectionMs?: number; showError?: boolean; failureToast?: string } = {}
     ): Promise<boolean> => {
       const {
-        maxRetries = 3,
-        waitConnectionMs = 3000,
+        // Lowered from 3/3000ms: with no socket service reachable in the
+        // current deployment (Vercel can't host a long-running Socket.IO
+        // process), the old defaults meant every admin action blocked for
+        // up to ~10s before falling back. The DB write already happened
+        // before this is called (source of truth), and the presentation
+        // screen has its own HTTP polling fallback — so this only needs a
+        // short grace window for transient reconnects, not a long wait for
+        // a socket that isn't there at all.
+        maxRetries = 2,
+        waitConnectionMs = 800,
         showError = true,
         failureToast = 'Comando pode não ter sido recebido. Recarregue a página de apresentação.',
       } = options
