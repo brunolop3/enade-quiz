@@ -1068,8 +1068,12 @@ export default function AdminPage() {
 
     const sessionCode = selectedSession.code
 
+    // Polling-only: confirmed root cause (2026-07-06) is that the Railway
+    // edge returns NGHTTP2_PROTOCOL_ERROR on the WebSocket Extended
+    // CONNECT (RFC 8441) real browsers use over HTTP/2 — a Railway edge
+    // limitation, not fixable client/server-side.
     const socketInstance = io(getSocketUrl(), {
-      transports: ['websocket', 'polling'],
+      transports: ['polling'],
       forceNew: true,
       reconnection: true,
       reconnectionAttempts: 10,

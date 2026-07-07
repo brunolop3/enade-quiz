@@ -19,7 +19,15 @@ let socket: Socket | null = null
 export function getSocket(): Socket {
   if (!socket) {
     socket = io(getSocketUrl(), {
-      transports: ['websocket', 'polling'],
+      // Polling-only: confirmed root cause (2026-07-06) is that the
+      // Railway edge negotiates HTTP/2 via ALPN with real browsers, but
+      // returns NGHTTP2_PROTOCOL_ERROR on the WebSocket Extended CONNECT
+      // (RFC 8441) that browsers use over an h2 connection — a Railway
+      // edge limitation, not something fixable from our client/server
+      // code. Node/curl tests "worked" only because neither negotiates
+      // h2 by default, so they never hit this path. Revisit if the
+      // socket service moves to a host with proper WS-over-h2 support.
+      transports: ['polling'],
       forceNew: true,
       reconnection: true,
       reconnectionAttempts: 10,

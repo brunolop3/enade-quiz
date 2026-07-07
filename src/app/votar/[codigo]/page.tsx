@@ -378,8 +378,12 @@ export default function StudentVotingPage({
         // the socket service isn't reachable at all (current deployment),
         // a shorter timeout means connect_error fires sooner, so the HTTP
         // polling fallback kicks in sooner too.
+        // Polling-only: confirmed root cause (2026-07-06) is that the
+        // Railway edge returns NGHTTP2_PROTOCOL_ERROR on the WebSocket
+        // Extended CONNECT (RFC 8441) real browsers use over HTTP/2 — a
+        // Railway edge limitation, not fixable client/server-side.
         const socket = io(getSocketUrl(), {
-          transports: ['websocket', 'polling'],
+          transports: ['polling'],
           timeout: 3000,
           reconnection: true,
           reconnectionAttempts: Infinity,
