@@ -12,7 +12,7 @@ export async function POST(
   { params }: { params: Promise<{ code: string }> }
 ) {
   try {
-    if (!verifyAdminAuth(request)) {
+    if (!(await verifyAdminAuth(request))) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 

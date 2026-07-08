@@ -37,7 +37,7 @@ export async function PUT(
   { params }: { params: Promise<{ code: string; questionId: string }> }
 ) {
   try {
-    if (!verifyAdminAuth(request)) {
+    if (!(await verifyAdminAuth(request))) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
@@ -162,7 +162,7 @@ export async function DELETE(
   { params }: { params: Promise<{ code: string; questionId: string }> }
 ) {
   try {
-    if (!verifyAdminAuth(request)) {
+    if (!(await verifyAdminAuth(request))) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 

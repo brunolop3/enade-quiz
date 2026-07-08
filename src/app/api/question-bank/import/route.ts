@@ -14,7 +14,7 @@ import {
 //   { sessionCode: string, questionIds: string[], importAll?: boolean, category?: string, course?: string }
 export async function POST(req: NextRequest) {
   try {
-    if (!verifyAdminAuth(req)) {
+    if (!(await verifyAdminAuth(req))) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 

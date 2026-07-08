@@ -74,6 +74,15 @@ model Vote {
   @@index([studentId])
 }
 
+model AdminToken {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  issuedAt  DateTime @default(now())
+  expiresAt DateTime
+
+  @@index([expiresAt])
+}
+
 model QuestionBank {
   id            String   @id @default(cuid())
   title         String

@@ -38,7 +38,7 @@ export async function GET() {
 //                            of a random one. Must be unique.
 export async function POST(request: NextRequest) {
   try {
-    if (!verifyAdminAuth(request)) {
+    if (!(await verifyAdminAuth(request))) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 

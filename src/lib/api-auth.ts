@@ -4,13 +4,20 @@
  * Strategy:
  *   - On successful login (`/api/admin/auth` POST) we mint a
  *     cryptographically-random token (crypto.randomUUID + HMAC over a
- *     server secret) and store it in the in-memory `ADMIN_TOKENS` map
+ *     server secret) and store it in the `AdminToken` Postgres table
  *     with a 24h expiry.
- *   - Every admin-only API route calls `verifyAdminAuth(request)` which
- *     checks the `x-admin-token` header against the in-memory set.
- *   - Tokens are single-instance (in-memory) — restarting the server
- *     invalidates all outstanding tokens, which is acceptable for this
- *     deployment and a feature for security.
+ *   - Every admin-only API route calls `await verifyAdminAuth(request)`
+ *     which checks the `x-admin-token` header against that table.
+ *
+ * Tokens used to live in an in-memory Map. That worked on a single
+ * long-running process (VPS/PM2) but broke on Vercel: each serverless
+ * invocation can run on a different instance with its own isolated
+ * memory, so a token minted on one instance was invisible to a request
+ * that happened to land on another — the admin panel would randomly
+ * 401 ("session expired") on commands that hit a different instance,
+ * most visibly on the stress-test route (long-running, more likely to
+ * cross an instance boundary). Moving the store to Postgres (shared
+ * across all instances) fixes this.
  *
  * The HMAC binds the random portion to the server secret so that
  * swapping the secret (e.g. rotating `ADMIN_SECRET_KEY`) invalidates
@@ -18,51 +25,9 @@
  */
 import crypto from 'node:crypto'
 import { NextRequest } from 'next/server'
-
-/* ── Token storage ───────────────────────────────────────────────── */
-
-interface AdminTokenRecord {
-  token: string
-  issuedAt: number
-  expiresAt: number
-}
-
-/**
- * In-memory set of valid admin tokens.
- *
- * Stored on `globalThis` (the same pattern used by `@/lib/db.ts` for
- * the Prisma client) so the set survives Next.js dev-mode module
- * re-evaluation. Without this, every Turbopack hot-reload would wipe
- * the allow-list and force the admin to log in again.
- */
-const G = globalThis as unknown as {
-  __ADMIN_TOKENS__?: Map<string, AdminTokenRecord>
-}
-export const ADMIN_TOKENS: Map<string, AdminTokenRecord> =
-  G.__ADMIN_TOKENS__ ?? (G.__ADMIN_TOKENS__ = new Map())
+import { db } from '@/lib/db'
 
 const TOKEN_TTL_MS = 24 * 60 * 60 * 1000 // 24 hours
-
-// Janitor: prune expired tokens every 10 minutes so the map stays
-// bounded. `unref`'d so it never keeps the process alive on its own.
-const TOKEN_CLEANUP_INTERVAL_MS = 10 * 60 * 1000
-
-function ensureTokenJanitor(): void {
-  // Use the global flag so we don't schedule multiple intervals across
-  // dev-mode module re-evaluations.
-  const g = G as unknown as { __ADMIN_TOKEN_JANITOR__?: NodeJS.Timeout }
-  if (g.__ADMIN_TOKEN_JANITOR__) return
-  const timer = setInterval(() => {
-    const now = Date.now()
-    for (const [key, rec] of ADMIN_TOKENS) {
-      if (rec.expiresAt <= now) ADMIN_TOKENS.delete(key)
-    }
-  }, TOKEN_CLEANUP_INTERVAL_MS)
-  if (typeof timer.unref === 'function') {
-    timer.unref()
-  }
-  g.__ADMIN_TOKEN_JANITOR__ = timer
-}
 
 /* ── Secret ──────────────────────────────────────────────────────── */
 
@@ -88,8 +53,7 @@ function getServerSecret(): string {
  *
  * Stores the token in `ADMIN_TOKENS` with a 24h expiry and returns it.
  */
-export function generateAdminToken(): string {
-  ensureTokenJanitor()
+export async function generateAdminToken(): Promise<string> {
   const random = crypto.randomUUID()
   const hmac = crypto
     .createHmac('sha256', getServerSecret())
@@ -98,10 +62,12 @@ export function generateAdminToken(): string {
   const token = `${random}.${hmac}`
 
   const now = Date.now()
-  ADMIN_TOKENS.set(token, {
-    token,
-    issuedAt: now,
-    expiresAt: now + TOKEN_TTL_MS,
+  await db.adminToken.create({
+    data: {
+      token,
+      issuedAt: new Date(now),
+      expiresAt: new Date(now + TOKEN_TTL_MS),
+    },
   })
 
   return token
@@ -116,12 +82,12 @@ export function generateAdminToken(): string {
  *   1. The header is present and well-formed.
  *   2. The HMAC portion matches a recomputation over the random
  *      portion using the current server secret.
- *   3. The token is in the in-memory `ADMIN_TOKENS` allow-list.
+ *   3. The token exists in the `AdminToken` table.
  *   4. The token has not expired.
  *
  * Expired tokens are deleted on access (lazy expiry).
  */
-export function verifyAdminAuth(request: NextRequest): boolean {
+export async function verifyAdminAuth(request: NextRequest): Promise<boolean> {
   const header = request.headers.get('x-admin-token')
   if (!header) return false
 
@@ -148,13 +114,14 @@ export function verifyAdminAuth(request: NextRequest): boolean {
     return false
   }
 
-  // Must also be in the in-memory allow-list (this is what gives us
-  // revocation + expiry).
-  const record = ADMIN_TOKENS.get(header)
+  // Must also exist in the shared (Postgres) allow-list — this is what
+  // gives us revocation + expiry, and what makes auth work consistently
+  // across serverless instances.
+  const record = await db.adminToken.findUnique({ where: { token: header } })
   if (!record) return false
 
-  if (record.expiresAt <= Date.now()) {
-    ADMIN_TOKENS.delete(header)
+  if (record.expiresAt.getTime() <= Date.now()) {
+    await db.adminToken.delete({ where: { token: header } }).catch(() => {})
     return false
   }
 
@@ -184,7 +151,7 @@ export function verifyAdminPassword(candidate: string): boolean {
 /**
  * Revoke a single token (logout). No-op if the token is unknown.
  */
-export function revokeAdminToken(token: string | null | undefined): void {
+export async function revokeAdminToken(token: string | null | undefined): Promise<void> {
   if (!token) return
-  ADMIN_TOKENS.delete(token)
+  await db.adminToken.delete({ where: { token } }).catch(() => {})
 }

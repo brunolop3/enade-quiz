@@ -88,7 +88,7 @@ export async function GET(req: NextRequest) {
 // POST /api/question-bank — Create a new question in the bank (ADMIN ONLY).
 export async function POST(req: NextRequest) {
   try {
-    if (!verifyAdminAuth(req)) {
+    if (!(await verifyAdminAuth(req))) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
@@ -188,7 +188,7 @@ export async function POST(req: NextRequest) {
 // DELETE /api/question-bank?id=... — Delete a question from the bank (ADMIN ONLY).
 export async function DELETE(req: NextRequest) {
   try {
-    if (!verifyAdminAuth(req)) {
+    if (!(await verifyAdminAuth(req))) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 

@@ -66,6 +66,6 @@ export async function POST(request: NextRequest) {
   }
 
   // 4) Success — mint a fresh token.
-  const token = generateAdminToken()
+  const token = await generateAdminToken()
   return NextResponse.json({ success: true, token })
 }

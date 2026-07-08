@@ -54,7 +54,7 @@ export async function GET(
 ) {
   try {
     // 1) Auth — admin only.
-    if (!verifyAdminAuth(request)) {
+    if (!(await verifyAdminAuth(request))) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
